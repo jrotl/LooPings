@@ -1,0 +1,392 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/loopings_base#"
+     xml:base="http://www.semanticweb.org/loopings_base"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/loopings_base"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#String -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#String"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/loopings_base#Description -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/loopings_base#Description">
+        <rdfs:label xml:lang="en">QueryHasDescription</rdfs:label>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/loopings_base#Query"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/loopings_base#Id -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/loopings_base#Id">
+        <rdfs:label xml:lang="en">QueryHasId</rdfs:label>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/loopings_base#Query"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/loopings_base#Sparql -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/loopings_base#Sparql">
+        <rdfs:label xml:lang="en">QueryHasSparql</rdfs:label>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/loopings_base#Query"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/loopings_base#Query -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/loopings_base#Query">
+        <rdfs:label xml:lang="en">Query</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/loopings_base#Q01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/loopings_base#Q1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/loopings_base#Query"/>
+        <Sparql rdf:datatype="http://www.w3.org/2001/XMLSchema#String">
+select distinct *
+ where {
+ graph ?g { 
+ { 
+    &lt;http://dbpedia.org/resource/Howden_railway_station&gt; &lt;http://dbpedia.org/ontology/railwayPlatforms&gt; ?v. 
+ } 
+ Union 
+ { 
+         ?t owl:sameAs &lt;http://dbpedia.org/resource/Howden_railway_station&gt;. 
+         ?t &lt;http://dbpedia.org/ontology/railwayPlatforms&gt; ?v .
+ } 
+ OPTIONAL {?v &lt;http://www.w3.org/2000/01/rdf-schema#label&gt; ?l filter (lang(?l)="en")}
+ } 
+} limit 20
+		</Sparql>
+        <Id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Id>
+        <Description rdf:datatype="http://www.w3.org/2001/XMLSchema#String">How could I train my memory for remember things?</Description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/loopings_base#Q02 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/loopings_base#Q2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/loopings_base#Query"/>
+        <Sparql rdf:datatype="http://www.w3.org/2001/XMLSchema#String">
+# This query increases in complexity: 3 classes and 3 properties are involved. Additionally, 
+# there is a triangular pattern of relationships between the objects involved.
+PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX ub: &lt;http://www.lehigh.edu/~zhp2/2004/0401/univ-bench.owl#&gt;
+SELECT ?X, ?Y, ?Z
+	WHERE {
+		?X rdf:type ub:GraduateStudent .
+		?Y rdf:type ub:University .
+		?Z rdf:type ub:Department .
+		?X ub:memberOf ?Z .
+		?Z ub:subOrganizationOf ?Y .
+		?X ub:undergraduateDegreeFrom ?Y
+	}	
+		</Sparql>
+        <Id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Id>
+        <Description rdf:datatype="http://www.w3.org/2001/XMLSchema#String">Why eye contact is important for the relationship between people?</Description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/loopings_base#Q03 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/loopings_base#Q3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/loopings_base#Query"/>
+        <Sparql rdf:datatype="http://www.w3.org/2001/XMLSchema#String">
+# This query is similar to Query 1 but class Publication has a wide hierarchy.
+PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX ub: &lt;http://www.lehigh.edu/~zhp2/2004/0401/univ-bench.owl#&gt;
+SELECT ?X
+	WHERE {
+		?X rdf:type ub:Publication .
+		?X ub:publicationAuthor http://www.Department0.University0.edu/AssistantProfessor0
+	}
+		</Sparql>
+        <Id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Id>
+        <Description rdf:datatype="http://www.w3.org/2001/XMLSchema#String">How brain performs the learning process when I learn a music instrument?</Description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/loopings_base#Q04 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/loopings_base#Q4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/loopings_base#Query"/>
+        <Sparql rdf:datatype="http://www.w3.org/2001/XMLSchema#String">
+# This query has small input and high selectivity. It assumes subClassOf relationship 
+# between Professor and its subclasses. Class Professor has a wide hierarchy. Another 
+# feature is that it queries about multiple properties of a single class.
+PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX ub: &lt;http://www.lehigh.edu/~zhp2/2004/0401/univ-bench.owl#&gt;
+SELECT ?X, ?Y1, ?Y2, ?Y3
+	WHERE {
+		?X rdf:type ub:Professor .
+		?X ub:worksFor &lt;http://www.Department0.University0.edu&gt; .
+		?X ub:name ?Y1 .
+		?X ub:emailAddress ?Y2 .
+		?X ub:telephone ?Y3
+	}
+		</Sparql>
+        <Id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</Id>
+        <Description rdf:datatype="http://www.w3.org/2001/XMLSchema#String">How cortex can evolve during the life?</Description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/loopings_base#Q05 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/loopings_base#Q5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/loopings_base#Query"/>
+        <Sparql rdf:datatype="http://www.w3.org/2001/XMLSchema#String">
+# This query assumes subClassOf relationship between Person and its subclasses
+# and subPropertyOf relationship between memberOf and its subproperties.
+# Moreover, class Person features a deep and wide hierarchy.
+PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX ub: &lt;http://www.lehigh.edu/~zhp2/2004/0401/univ-bench.owl#&gt;
+SELECT ?X
+	WHERE {
+		?X rdf:type ub:Person .
+		?X ub:memberOf &lt;http://www.Department0.University0.edu&gt;
+	}
+  		</Sparql>
+        <Id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</Id>
+        <Description rdf:datatype="http://www.w3.org/2001/XMLSchema#String">In what amygdala acts on the first impression bias?</Description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/loopings_base#Q06 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/loopings_base#Q6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/loopings_base#Query"/>
+        <Sparql rdf:datatype="http://www.w3.org/2001/XMLSchema#String">
+# This query queries about only one class. But it assumes both the explicit
+# subClassOf relationship between UndergraduateStudent and Student and the
+# implicit one between GraduateStudent and Student. In addition, it has large
+# input and low selectivity.
+PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX ub: &lt;http://www.lehigh.edu/~zhp2/2004/0401/univ-bench.owl#&gt;
+SELECT ?X 
+	WHERE {
+		?X rdf:type ub:Student
+	}
+  		</Sparql>
+        <Id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</Id>
+        <Description rdf:datatype="http://www.w3.org/2001/XMLSchema#String">How retention process is featured?</Description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/loopings_base#Q07 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/loopings_base#Q7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/loopings_base#Query"/>
+        <Sparql rdf:datatype="http://www.w3.org/2001/XMLSchema#String">
+# This query is similar to Query 6 in terms of class Student but it increases in the
+# number of classes and properties and its selectivity is high.
+PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX ub: &lt;http://www.lehigh.edu/~zhp2/2004/0401/univ-bench.owl#&gt;
+SELECT ?X, ?Y
+	WHERE {
+		?X rdf:type ub:Student .
+		?Y rdf:type ub:Course .
+		?X ub:takesCourse ?Y .
+		&lt;http://www.Department0.University0.edu/AssociateProfessor0&gt; ub:teacherOf ?Y
+	}
+		</Sparql>
+        <Id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</Id>
+        <Description rdf:datatype="http://www.w3.org/2001/XMLSchema#String">Is it cognitively relevant as soon as people memorize numerical information?</Description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/loopings_base#Q08 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/loopings_base#Q8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/loopings_base#Query"/>
+        <Sparql rdf:datatype="http://www.w3.org/2001/XMLSchema#String">
+# This query is further more complex than Query 7 by including one more property.
+PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX ub: &lt;http://www.lehigh.edu/~zhp2/2004/0401/univ-bench.owl#&gt;
+SELECT ?X, ?Y, ?Z
+	WHERE {
+		?X rdf:type ub:Student .
+		?Y rdf:type ub:Department .
+		?X ub:memberOf ?Y .
+		?Y ub:subOrganizationOf &lt;http://www.University0.edu&gt; .
+		?X ub:emailAddress ?Z
+	}
+		</Sparql>
+        <Id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</Id>
+        <Description rdf:datatype="http://www.w3.org/2001/XMLSchema#String">When combination of tasks is the most difficult: when you write your listening or when you say your reading?</Description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/loopings_base#Q09 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/loopings_base#Q9">
+        <rdf:type rdf:resource="http://www.semanticweb.org/loopings_base#Query"/>
+        <Sparql rdf:datatype="http://www.w3.org/2001/XMLSchema#String">
+# Besides the aforementioned features of class Student and the wide hierarchy of
+# class Faculty, like Query 2, this query is characterized by the most classes and
+# properties in the query set and there is a triangular pattern of relationships.
+PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX ub: &lt;http://www.lehigh.edu/~zhp2/2004/0401/univ-bench.owl#&gt;
+SELECT ?X, ?Y, ?Z
+	WHERE {
+		?X rdf:type ub:Student .
+		?Y rdf:type ub:Faculty .
+		?Z rdf:type ub:Course .
+		?X ub:advisor ?Y .
+		?Y ub:teacherOf ?Z .
+		?X ub:takesCourse ?Z
+	}
+		</Sparql>
+        <Id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</Id>
+        <Description rdf:datatype="http://www.w3.org/2001/XMLSchema#String">Age: is it really important when we have to consider a new language as his/her mother language?</Description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/loopings_base#Q10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/loopings_base#Q10">
+        <rdf:type rdf:resource="http://www.semanticweb.org/loopings_base#Query"/>
+        <Sparql rdf:datatype="http://www.w3.org/2001/XMLSchema#String">
+# This query differs from Query 6, 7, 8 and 9 in that it only requires the
+# (implicit) subClassOf relationship between GraduateStudent and Student, i.e., 
+#subClassOf rela-tionship between UndergraduateStudent and Student does not add
+# to the results.
+PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX ub: &lt;http://www.lehigh.edu/~zhp2/2004/0401/univ-bench.owl#&gt;
+SELECT ?X
+	WHERE {
+		?X rdf:type ub:Student .
+		?X ub:takesCourse &lt;http://www.Department0.University0.edu/GraduateCourse0&gt;
+	}
+		</Sparql>
+        <Id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Id>
+        <Description rdf:datatype="http://www.w3.org/2001/XMLSchema#String">What is it preferable to do during a working day: sleeping or drinking coffee to retrieve efficiency and become less distracted?</Description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/loopings_base#Q11 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/loopings_base#Q11">
+        <rdf:type rdf:resource="http://www.semanticweb.org/loopings_base#Query"/>
+        <Sparql rdf:datatype="http://www.w3.org/2001/XMLSchema#String">
+# Query 11, 12 and 13 are intended to verify the presence of certain OWL reasoning
+# capabilities in the system. In this query, property subOrganizationOf is defined
+# as transitive. Since in the benchmark data, instances of ResearchGroup are stated
+# as a sub-organization of a Department individual and the later suborganization of 
+# a University individual, inference about the subOrgnizationOf relationship between
+# instances of ResearchGroup and University is required to answer this query. 
+# Additionally, its input is small.
+PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX ub: &lt;http://www.lehigh.edu/~zhp2/2004/0401/univ-bench.owl#&gt;
+SELECT ?X
+	WHERE {
+		?X rdf:type ub:ResearchGroup .
+		?X ub:subOrganizationOf &lt;http://www.University0.edu&gt;
+	} 
+		</Sparql>
+        <Id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</Id>
+        <Description rdf:datatype="http://www.w3.org/2001/XMLSchema#String">Face recognition: how the visual system performs a matching with a face in memory?</Description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/loopings_base#Q12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/loopings_base#Q12">
+        <rdf:type rdf:resource="http://www.semanticweb.org/loopings_base#Query"/>
+        <Sparql rdf:datatype="http://www.w3.org/2001/XMLSchema#String">
+# The benchmark data do not produce any instances of class Chair. Instead, each
+# Department individual is linked to the chair professor of that department by 
+# property headOf. Hence this query requires realization, i.e., inference that
+# that professor is an instance of class Chair because he or she is the head of a
+# department. Input of this query is small as well.
+PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX ub: &lt;http://www.lehigh.edu/~zhp2/2004/0401/univ-bench.owl#&gt;
+SELECT ?X, ?Y
+	WHERE {
+		?X rdf:type ub:Chair .
+		?Y rdf:type ub:Department .
+		?X ub:worksFor ?Y .
+		?Y ub:subOrganizationOf &lt;http://www.University0.edu&gt;
+	} 
+		</Sparql>
+        <Id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</Id>
+        <Description rdf:datatype="http://www.w3.org/2001/XMLSchema#String">Where could I find psychological experiments tools?</Description>
+    </owl:NamedIndividual>
+    
+
+
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.5-SNAPSHOT) http://owlapi.sourceforge.net -->
+
