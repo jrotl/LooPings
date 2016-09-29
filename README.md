@@ -18,13 +18,8 @@ Lexical and Ontological Observations and Plots INGathering Similarities
 	  
 - USAGE:
 
-	The executables of LOcKinG (and possibly some shared libraries) are located in the './Binaries ' directory. 
-	The sources of LOcKinG are located in the './Sources' directory.
-
-	
-	- COMMAND LINE:
-
-		To use the library make sure that Java finds owlapi-distribution-3.4.5.jar,ws4j-1.0.1.jar and stanford-corenlp-full-2014-06-16/* in the class path.
+	The executables of LOcKinG (and possibly some shared libraries) are located in the './bin ' directory. 
+	The sources of LOcKinG are located in the './src' directory. To use the library make sure that Java finds owlapi-		distribution-3.4.5.jar,ws4j-1.0.1.jar and stanford-corenlp-full-2014-06-16/* in the class path.
 
 
 			For example:
@@ -33,16 +28,13 @@ Lexical and Ontological Observations and Plots INGathering Similarities
 
 - REQUIREMENTS and INSTALLATION:
 
-	LOOPINGS requires WORDNET:SIMILARITY (WS4J) 1.0.1 [1] and STANFORD CORENLP 2014-06-16 [2] and OWLAPI DISTRIBUTION 3.4.5 or above [3]. If they are not included 
-	in the release, then you should install them manually on your system. 
+	LOOPINGS requires WORDNET:SIMILARITY (WS4J) 1.0.1 [1] and STANFORD CORENLP 2014-06-16 [2] and OWLAPI DISTRIBUTION 3.4.5 or above [3]. If they are not included  in the release, then you should install them manually on your system. 
 		
 
 
 - CHANGELOG:
 
 	LOOPINGS version Fall2016:
-
-
 
 [1] https://code.google.com/p/ws4j/
 [2] http://nlp.stanford.edu/software/corenlp.shtml
