@@ -1,12 +1,12 @@
 # LooPings
-Lexical and ontological observations to Plot ingathering similarities
+Lexical and ontological observations to plot ingathering similarities
 - OVERVIEW:
 
-	LooPings is potentially still under active development and contains some room for improvement. LOOPINGS is distributed 		in the hope that it will be one day inspiring or useful, but WITHOUT ANY WARRANTY; without even the implied warranty of 	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+	LOOPINGS is potentially still under active development and contains some room for improvement. LOOPINGS is distributed 		in the hope that it will be one day inspiring or useful, but WITHOUT ANY WARRANTY; without even the implied warranty of 	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 	
-	LooPings has been fully implemented in Java 7, so please download the appropriate JDK from Sun.
+	LOOPINGS has been fully implemented in Java 7, so please download the appropriate JDK from Sun.
 	
-	LooPings uses the following libraries:
+	LOOPINGS uses the following libraries:
 
 	- WORDNET:SIMILARITY (WS4J): ws4j-1.0.1.jar, released under Open Source license (GNU GPL v2)
 	The WORDNET:SIMILARITY (WS4J) is a Java API for several published Semantic Relatedness/Similarity algorithms.
@@ -18,8 +18,8 @@ Lexical and ontological observations to Plot ingathering similarities
 	  
 - USAGE:
 
-	The executables of LooPings (and possibly some shared libraries) are located in the './bin ' directory. 
-	The sources of LooPings are located in the './src' directory. To use the library make sure that Java finds owlapi-		distribution-3.4.5.jar,ws4j-1.0.1.jar and stanford-corenlp-full-2014-06-16/* in the class path.
+	The executables of LOOPINGS (and possibly some shared libraries) are located in the './bin ' directory. 
+	The sources of LOOPINGS are located in the './src' directory. To use the library make sure that Java finds owlapi-		distribution-3.4.5.jar,ws4j-1.0.1.jar and stanford-corenlp-full-2014-06-16/* in the class path.
 
 
 			For example:
@@ -28,7 +28,7 @@ Lexical and ontological observations to Plot ingathering similarities
 
 - REQUIREMENTS and INSTALLATION:
 
-	LooPings requires WORDNET:SIMILARITY (WS4J) 1.0.1 [1] and STANFORD CORENLP 2014-06-16 [2] and OWLAPI DISTRIBUTION 3.4.5 or above [3]. If they are not included  in the release, then you should install them manually on your system. 
+	LOOPINGS requires WORDNET:SIMILARITY (WS4J) 1.0.1 [1] and STANFORD CORENLP 2014-06-16 [2] and OWLAPI DISTRIBUTION 3.4.5 or above [3]. If they are not included  in the release, then you should install them manually on your system. 
 		
 
 
