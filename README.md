@@ -34,7 +34,7 @@ Lexical and ontological observations to Plot ingathering similarities
 
 - CHANGELOG:
 
-	LooPings version Fall2016:
+	LooPings version Fall 2016:
 
 [1] https://code.google.com/p/ws4j/
 [2] http://nlp.stanford.edu/software/corenlp.shtml
