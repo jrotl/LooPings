@@ -1,5 +1,5 @@
 # LooPings
-Lexical and ontological observations to plot ingathering similarities
+Lexical and ontological observations to Plot ingathering similarities
 - OVERVIEW:
 
 	LOOPINGS is potentially still under active development and contains some room for improvement. LOOPINGS is distributed 		in the hope that it will be one day inspiring or useful, but WITHOUT ANY WARRANTY; without even the implied warranty of 	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
