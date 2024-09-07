@@ -6,8 +6,8 @@ Lexical and ontological observations to Plot ingathering similarities
 
 	- WORDNET:SIMILARITY (WS4J): ws4j-1.0.1.jar, released under Open Source license (GNU GPL v2)
 	The WORDNET:SIMILARITY (WS4J) is a Java API for several published Semantic Relatedness/Similarity algorithms.
-	- STANFORD CORENLP: stanford-corenlp-full-2014-06-16/, released under the GNU General Public License (v3 or later; in 		general Stanford NLP code is GPL v2+, but CoreNLP uses several Apache-licensed libraries, and so the composite is v3+). 
-	The Stanford CoreNLP a set of natural language analysis tools which can take raw text input and give the base forms of 		words written in Java.		
+	- STANFORD CORENLP: stanford-corenlp-full-2014-06-16/, released under the GNU General Public License (v3 or later; in general Stanford NLP code is GPL v2+, but CoreNLP uses several Apache-licensed libraries, and so the composite is v3+). 
+	The Stanford CoreNLP a set of natural language analysis tools which can take raw text input and give the base forms of words written in Java.		
 	- OWLAPI DISTRIBUTION 3.4.* or above, released under Open Source licenses (LGPL and Apache). 
 	The OWL API is a Java API for creating, manipulating and serialising OWL Ontologies. 
 
@@ -15,11 +15,11 @@ Lexical and ontological observations to Plot ingathering similarities
 - USAGE:
 
 	The executables of LOOPINGS (and possibly some shared libraries) are located in the './bin ' directory. 
-	The sources of LOOPINGS are located in the './src' directory. To use the library make sure that Java finds owlapi-		distribution-3.4.5.jar,ws4j-1.0.1.jar and stanford-corenlp-full-2014-06-16/* in the class path.
+	The sources of LOOPINGS are located in the './src' directory. To use the library make sure that Java finds owlapi-distribution-3.4.5.jar,ws4j-1.0.1.jar and stanford-corenlp-full-2014-06-16/* in the class path.
 
 
-	For example:
-	java -cp .:ws4j-1.0.1.jar:owlapi-distribution-3.4.5.jar:stanford-corenlp-full-2014-06-16/*:. LOOPINGS_GUI
+		For example:
+		java -cp .:ws4j-1.0.1.jar:owlapi-distribution-3.4.5.jar:stanford-corenlp-full-2014-06-16/*:. LOOPINGS_GUI
 
 
 - REQUIREMENTS and INSTALLATION:
