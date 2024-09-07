@@ -18,7 +18,6 @@ Lexical and ontological observations to Plot ingathering similarities
 	The sources of LOOPINGS are located in the './src' directory. To use the library make sure that Java finds owlapi-distribution-3.4.5.jar,ws4j-1.0.1.jar and stanford-corenlp-full-2014-06-16/* in the class path.
 
 
-		For example:
 		java -cp .:ws4j-1.0.1.jar:owlapi-distribution-3.4.5.jar:stanford-corenlp-full-2014-06-16/*:. LOOPINGS_GUI
 
 
